@@ -5,7 +5,7 @@ console.log(galleryImages);
 const refs = {
     gallery: document.querySelector(".js-gallery"),
     lightbox: document.querySelector(".lightbox"),
-    changeLightboximg: document.querySelector(".lightbox__image"),
+    changeLightboxImg: document.querySelector(".lightbox__image"),
     closeLightboxBtn: document.querySelector('button[data-action="close-lightbox"]'),
     modal: document.querySelector(".lightbox__content"),
     image: document.createElement("img"),
@@ -41,8 +41,8 @@ function onGalleryClick(evt) {
     }
     if (evt.target.nodeName === 'IMG') {
         refs.lightbox.classList.add("is-open");
-        refs.changeLightboximg.src = evt.target.getAttribute("data-source");
-        refs.changeLightboximg.alt = evt.target.alt;
+        refs.changeLightboxImg.src = evt.target.getAttribute("data-source");
+        refs.changeLightboxImg.alt = evt.target.alt;
     }
     window.addEventListener("keyup", clickKey);
 }
@@ -50,8 +50,8 @@ function onGalleryClick(evt) {
 function handlerCloseClick(evt) {
     evt.preventDefault();
     refs.lightbox.classList.remove("is-open");
-    refs.changeLightboximg.src = '';
-    refs.changeLightboximg.alt = '';
+    refs.changeLightboxImg.src ='';
+    refs.changeLightboxImg.alt ='';
     window.removeEventListener("keyup", clickKey);
 }
 
